@@ -2,25 +2,16 @@
 	session_start();
 	
 	try {
-	//DATABASE INFO
 	$dbname="mktetris";
 	$dbuser="mk";
 	$dbpass="mkpass";
 	
 	$conn = new PDO('mysql:host=localhost;dbname='.$dbname.';', $dbuser, $dbpass);
 	
-	//Test if connection was a success
-	/*
-		$_SESSION['success']="Connection Successful";
-		echo $_SESSION['success'];
-	*/
-	
 	}
 	catch (PDOException $error) {
 	    echo $error->getMessage();
 	}
-	
-	//Getting user data
 	function updateSessionData()
 	{
 		global $conn;
